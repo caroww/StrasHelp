@@ -15,6 +15,7 @@ use App\Model\ItemManager;
  * Class ItemController
  *
  */
+
 class ItemController extends AbstractController
 {
 
@@ -27,6 +28,7 @@ class ItemController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function index()
     {
         $itemManager = new ItemManager();
@@ -35,17 +37,7 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
 
-    public function connexion()
-    {
-        $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
-
-        return $this->twig->render('Item/connexion.html.twig', ['items' => $items]);
-    }
-
-
-
-    /**
+  /**
      * Display item informations specified by $id
      *
      * @param int $id
