@@ -35,6 +35,15 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
 
+    public function connexion()
+    {
+        $itemManager = new ItemManager();
+        $items = $itemManager->selectAll();
+
+        return $this->twig->render('Item/connexion.html.twig', ['items' => $items]);
+    }
+
+
 
     /**
      * Display item informations specified by $id
