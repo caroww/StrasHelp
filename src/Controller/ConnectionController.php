@@ -7,7 +7,6 @@ use App\Model\ConnectionManager;
 /**
  * Class ConnectionController
  */
-
 class ConnectionController extends AbstractController
 {
 

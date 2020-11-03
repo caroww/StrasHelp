@@ -7,7 +7,6 @@ use App\Model\MembersManager;
 /**
  * Class MembersController
  */
-
 class MembersController extends AbstractController
 {
 

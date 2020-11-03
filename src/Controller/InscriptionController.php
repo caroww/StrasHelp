@@ -15,7 +15,6 @@ use App\Model\InscriptionManager;
  * Class ItemController
  *
  */
-
 class InscriptionController extends AbstractController
 {
 
@@ -34,6 +33,6 @@ class InscriptionController extends AbstractController
         $inscriptionManager = new InscriptionManager();
         $inscription = $inscriptionManager->selectAll();
 
-        return $this->twig->render('Inscription/index.html.twig', ['firstname' => $firstname, 'lastname' => $lastname ]);
+        return $this->twig->render('Inscription/index.html.twig', ['firstname' => $firstname, 'lastname' => $lastname]);
     }
 }

@@ -7,7 +7,6 @@ use App\Model\AdvertsManager;
 /**
  * Class AdvertsController
  */
-
 class AdvertsController extends AbstractController
 {
 
@@ -28,7 +27,8 @@ class AdvertsController extends AbstractController
 
         return $this->twig->render('Adverts/index.html.twig', ['adverts' => $adverts]);
     }
-     /**
+
+    /**
      * Display adverts informations specified by $id
      *
      * @param int $id
@@ -69,7 +69,7 @@ class AdvertsController extends AbstractController
             $adverts['duration'] = $_POST['duration'];
             $adverts['description'] = $_POST['description'];
             $adverts['availability'] = $_POST['availability'];
-            $adverts['id'] = $id; 
+            $adverts['id'] = $id;
             $advertsManager->update($adverts);
         }
         return $this->twig->render('Adverts/edit.html.twig', ['adverts' => $adverts]);
@@ -86,26 +86,24 @@ class AdvertsController extends AbstractController
      */
     public function add()
     {
-        
+
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $advertsManager = new AdvertsManager();
             $adverts = [
                 'advertStatus' => $_POST['advertStatus'],
                 'searchService' => $_POST['searchService'],
-                'id_category'=> 1,
+                'id_category' => 1,
                 'location' => $_POST['location'],
                 'duration' => $_POST['duration'],
                 'description' => $_POST['description'],
                 'availability' => $_POST['availability'],
                 'id_applicant' => 1
-                
+
             ];
             $id = $advertsManager->insert($adverts);
             header('Location:/adverts/show/' . $id);
-        }
-       
-;
+        };
         return $this->twig->render('Adverts/add.html.twig');
     }
 

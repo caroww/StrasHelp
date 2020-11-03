@@ -4,26 +4,27 @@
     <h1>Toutes les annonces</h1>
     <a href="/adverts/add">Publier une annonce</a>
     <ul>
-    <style>li{list-style:none;}</style>
+        <style>li {
+                list-style: none;
+            }</style>
         {% for advert in adverts %}
             <li>
                 <div class="card">
                     <h5 class="card-header">{{ advert.search_service }}</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ advert.category }}</h5>
-                                <p class="card-text">{{ advert.location}}</p>
-                            <a href="/adverts/show/{{ advert.id }}" class="btn btn-primary">Voir l'annonce</a>
-                        </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ advert.category }}</h5>
+                        <p class="card-text">{{ advert.location }}</p>
+                        <a href="/adverts/show/{{ advert.id }}" class="btn btn-primary">Voir l'annonce</a>
+                    </div>
                 </div>
-            </li>                  
+            </li>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
     </ul>
-    
+
 
 {% endblock %}
-
 
 
 

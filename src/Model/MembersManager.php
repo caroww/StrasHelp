@@ -60,7 +60,7 @@ class MembersManager extends AbstractManager
      * @param array $Members
      * @return bool
      */
-    public function update(array $Members):bool
+    public function update(array $Members): bool
     {
 
         // prepared request

@@ -26,14 +26,14 @@ class AdvertsManager extends AbstractManager
      * @param array $advert
      * @return int
      */
-    
+
     public function insert(array $adverts): int
     {
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " ( `id_category`,`id_applicant`,`advertStatus`, `search_service`, `location`, `duration`, `description`, `availability`) 
         VALUES (:id_category, :id_applicant, :advertStatus, :search_Service, :location, :duration, :description, :availability)");
 
-        
+
         $statement->bindValue('id_category', $adverts['id_category'], PDO::PARAM_INT);
         $statement->bindValue('id_applicant', $adverts['id_applicant'], PDO::PARAM_INT);
         $statement->bindValue('advertStatus', $adverts['advertStatus'], PDO::PARAM_INT);
@@ -64,7 +64,7 @@ class AdvertsManager extends AbstractManager
      * @param array $Adverts
      * @return bool
      */
-    public function update(array $adverts):bool
+    public function update(array $adverts): bool
     {
 
         // prepared request

@@ -15,7 +15,6 @@ use App\Model\ItemManager;
  * Class ItemController
  *
  */
-
 class ItemController extends AbstractController
 {
 
@@ -37,7 +36,7 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
 
-  /**
+    /**
      * Display item informations specified by $id
      *
      * @param int $id
@@ -95,9 +94,7 @@ class ItemController extends AbstractController
             ];
             $id = $itemManager->insert($item);
             header('Location:/item/show/' . $id);
-        }
-        
-;
+        };
         return $this->twig->render('Item/add.html.twig');
     }
 

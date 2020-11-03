@@ -1,19 +1,19 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Votre annonce</h1>
-    <div>
+<h1>Votre annonce</h1>
+<div>
     <h2>Titre : {{ adverts.search_service }}</h2>
     <h3>Catégorie : {{id_category}}</h3>
     <p>{{ adverts.location}}</p>
     <p>Durée : {{ adverts.duration}} heure</p>
     <p>Commentaire : {{ adverts.description}}</p>
-    <p>Mes disponibilités : {{ adverts.availability}}</p>    
-    </div>
+    <p>Mes disponibilités : {{ adverts.availability}}</p>
+</div>
 
-    <a href="/adverts/edit/{{ adverts.id }}">Edit</a>
-    <a href="/adverts/delete/{{adverts.id}}">Supprimer</a>
-    <a href="/adverts/index">Back</a>
- <ul>
-    
-{% endblock %}    
+<a href="/adverts/edit/{{ adverts.id }}">Edit</a>
+<a href="/adverts/delete/{{adverts.id}}">Supprimer</a>
+<a href="/adverts/index">Back</a>
+<ul>
+
+    {% endblock %}

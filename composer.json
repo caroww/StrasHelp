@@ -1,17 +1,19 @@
 {
-    "name": "caro/strashelp",
-    "description": "projet strashelp",
-    "authors": [
-        {
-            "name": "caroww",
-            "email": "caroline.ww@wanadoo.fr"
-        }
-    ],
-    "require": {
-        "twig/twig": "^3.1",
-      "ext-pdo": "*"
-    },
-    "autoload": {
-        "psr-4": {"App\\":"src/"}
+  "name": "caro/strashelp",
+  "description": "projet strashelp",
+  "authors": [
+    {
+      "name": "caroww",
+      "email": "caroline.ww@wanadoo.fr"
     }
+  ],
+  "require": {
+    "twig/twig": "^3.1",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
 }

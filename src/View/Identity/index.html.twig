@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>All users (by order of creation)</h1>
+    <h4><a href="/identity/add">Create a user</a></h4>
+    <br>
+    <ul>
+        <style>li {
+                list-style: none;
+            }</style>
+        {% for user in identity %}
+            <li>
+                <div class="card">
+                    <h5 class="card-header">{{ user.firstname }} {{ user.lastname }}</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user.city }}</h5>
+                        <p class="card-text">Email: {{ user.email }}</p>
+                        <a href="/identity/show/{{ user.id }}" class="btn btn-primary">Show user info</a>
+                    </div>
+                </div>
+                <br>
+            </li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
+
+

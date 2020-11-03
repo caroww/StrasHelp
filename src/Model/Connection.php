@@ -11,7 +11,7 @@
 
 namespace App\Model;
 
-use \PDO;
+use PDO;
 use PDOException;
 
 /**

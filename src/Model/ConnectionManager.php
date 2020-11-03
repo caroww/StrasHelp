@@ -60,7 +60,7 @@ class ConnectionManager extends AbstractManager
      * @param array $Connection
      * @return bool
      */
-    public function update(array $Connection):bool
+    public function update(array $Connection): bool
     {
 
         // prepared request
