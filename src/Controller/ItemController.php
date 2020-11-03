@@ -88,7 +88,6 @@ class ItemController extends AbstractController
      */
     public function add()
     {
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $itemManager = new ItemManager();
             $item = [
@@ -97,7 +96,8 @@ class ItemController extends AbstractController
             $id = $itemManager->insert($item);
             header('Location:/item/show/' . $id);
         }
-
+        
+;
         return $this->twig->render('Item/add.html.twig');
     }
 

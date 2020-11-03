@@ -19,7 +19,7 @@ class PublishManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'Publish';
+    const TABLE = 'advert';
 
     /**
      *  Initializes this class.
@@ -29,47 +29,4 @@ class PublishManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-
-    /**
-     * @param array $Publish
-     * @return int
-     */
-    public function insert(array $Publish): int
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`) VALUES (:title)");
-        $statement->bindValue('title', $Publish['title'], PDO::PARAM_STR);
-
-        if ($statement->execute()) {
-            return (int)$this->pdo->lastInsertId();
-        }
-    }
-
-
-    /**
-     * @param int $id
-     */
-    public function delete(int $id): void
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("DELETE FROM " . self::TABLE . " WHERE id=:id");
-        $statement->bindValue('id', $id, PDO::PARAM_INT);
-        $statement->execute();
-    }
-
-
-    /**
-     * @param array $Publish
-     * @return bool
-     */
-    public function update(array $Publish):bool
-    {
-
-        // prepared request
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title` = :title WHERE id=:id");
-        $statement->bindValue('id', $Publish['id'], PDO::PARAM_INT);
-        $statement->bindValue('title', $Publish['title'], PDO::PARAM_STR);
-
-        return $statement->execute();
-    }
 }

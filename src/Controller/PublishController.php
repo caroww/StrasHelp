@@ -22,9 +22,14 @@ class PublishController extends AbstractController
      */
 
     public function index()
-    {
-        $PublishManager = new PublishManager();
+    { 
 
-        return $this->twig->render('Publish/index.html.twig');
+        $publishManager = new PublishManager();
+        $publish = $publishManager->selectAll();
+        
+
+        return $this->twig->render('Publish/index.html.twig', ['search_service' => $publish]);
+       
     }
+
 }

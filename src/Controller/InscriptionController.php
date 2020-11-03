@@ -1,11 +1,19 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: root
+ * Date: 11/10/17
+ * Time: 16:07
+ * PHP version 7
+ */
 
 namespace App\Controller;
 
 use App\Model\InscriptionManager;
 
 /**
- * Class InscriptionController
+ * Class ItemController
+ *
  */
 
 class InscriptionController extends AbstractController
@@ -13,7 +21,7 @@ class InscriptionController extends AbstractController
 
 
     /**
-     * Display Inscription listing
+     * Display item listing
      *
      * @return string
      * @throws \Twig\Error\LoaderError
@@ -23,8 +31,9 @@ class InscriptionController extends AbstractController
 
     public function index()
     {
-        $InscriptionManager = new InscriptionManager();
+        $inscriptionManager = new InscriptionManager();
+        $inscription = $inscriptionManager->selectAll();
 
-        return $this->twig->render('Inscription/index.html.twig');
+        return $this->twig->render('Inscription/index.html.twig', ['firstname' => $firstname, 'lastname' => $lastname ]);
     }
 }
