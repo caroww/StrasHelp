@@ -12,12 +12,12 @@ namespace App\Model;
 /**
  *
  */
-class ItemManager extends AbstractManager
+class MembersManager extends AbstractManager
 {
     /**
      *
      */
-    const TABLE = 'item';
+    const TABLE = 'Members';
 
     /**
      *  Initializes this class.
@@ -29,14 +29,14 @@ class ItemManager extends AbstractManager
 
 
     /**
-     * @param array $item
+     * @param array $Members
      * @return int
      */
-    public function insert(array $item): int
-    { 
+    public function insert(array $Members): int
+    {
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`) VALUES (:title)");
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
+        $statement->bindValue('title', $Members['title'], \PDO::PARAM_STR);
 
         if ($statement->execute()) {
             return (int)$this->pdo->lastInsertId();
@@ -57,15 +57,16 @@ class ItemManager extends AbstractManager
 
 
     /**
-     * @param array $item
+     * @param array $Members
      * @return bool
      */
-    public function update(array $item):bool
+    public function update(array $Members):bool
     {
+
         // prepared request
         $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title` = :title WHERE id=:id");
-        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
+        $statement->bindValue('id', $Members['id'], \PDO::PARAM_INT);
+        $statement->bindValue('title', $Members['title'], \PDO::PARAM_STR);
 
         return $statement->execute();
     }
