@@ -32,12 +32,14 @@ class IdentityManager extends AbstractManager
 
     /**
      * @param array $identity
-     * @return int
+     * @return bool
      */
-    public function insert(array $identity): int
+    public function insert(array $identity)
     {
-        $query = 'INSERT INTO identity (isAdmin, accountStatus, firstname, lastname, gender, date_of_birth, city, phone, email, password) 
-            VALUES (0, 0, :firstname, :lastname, :gender, :date_of_birth, :city, :phone, :email, :password)';
+        $query = 'INSERT INTO identity (isAdmin, accountStatus, firstname, lastname, gender, date_of_birth, 
+city, phone, email, password) VALUES (0, 0, :firstname, :lastname, :gender, :date_of_birth, :city, :phone, 
+:email, :password)';
+
         $statement = $this->pdo->prepare($query);
 
         $statement->bindValue(':firstname', $identity['firstname'], PDO::PARAM_STR);
@@ -72,8 +74,9 @@ class IdentityManager extends AbstractManager
      */
     public function update(array $identity): bool
     {
-        $query = "UPDATE Identity SET firstname=:firstname, lastname=:lastname, gender=:gender, date_of_birth=:date_of_birth, 
-        city=:city, phone=:phone, email=:email, password=:password WHERE id=:id";
+        $query = "UPDATE Identity SET firstname=:firstname, lastname=:lastname, 
+gender=:gender, date_of_birth=:date_of_birth, city=:city, phone=:phone, email=:email, 
+password=:password WHERE id=:id";
 
         $statement = $this->pdo->prepare($query);
 
@@ -89,5 +92,4 @@ class IdentityManager extends AbstractManager
 
         return $statement->execute();
     }
-
 }

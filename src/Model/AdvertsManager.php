@@ -23,15 +23,17 @@ class AdvertsManager extends AbstractManager
     }
 
     /**
-     * @param array $advert
+     * @param array $adverts
      * @return int
      */
 
     public function insert(array $adverts): int
     {
         // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " ( `id_category`,`id_applicant`,`advertStatus`, `search_service`, `location`, `duration`, `description`, `availability`) 
-        VALUES (:id_category, :id_applicant, :advertStatus, :search_Service, :location, :duration, :description, :availability)");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " ( `id_category`, 
+        `id_applicant`,`advertStatus`, `search_service`, `location`, `duration`, `description`, `availability`) 
+        VALUES (:id_category, :id_applicant, :advertStatus, :search_Service, :location, :duration, 
+        :description, :availability)");
 
 
         $statement->bindValue('id_category', $adverts['id_category'], PDO::PARAM_INT);
@@ -61,17 +63,18 @@ class AdvertsManager extends AbstractManager
 
 
     /**
-     * @param array $Adverts
+     * @param array $adverts
      * @return bool
      */
     public function update(array $adverts): bool
     {
 
         // prepared request
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `id_category` = :id_category,`id_applicant` = :id_applicant,
-        `advertStatus` = :advertStatus, `search_service` = :search_service, `location` = :location, `duration` = :duration, `description`=:description, 
-        `availability`=:availability
-         WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `id_category` = :id_category,
+        `id_applicant` = :id_applicant,
+        `advertStatus` = :advertStatus, `search_service` = :search_service, `location` = :location, 
+        `duration` = :duration, `description`=:description, 
+        `availability`=:availability WHERE id=:id");
         $statement->bindValue('id', $adverts['id'], PDO::PARAM_INT);
         $statement->bindValue('id_category', $adverts['id_category'], PDO::PARAM_INT);
         $statement->bindValue('id_applicant', $adverts['id_applicant'], PDO::PARAM_INT);
