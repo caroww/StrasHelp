@@ -10888,7 +10888,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 input[type=text], select {
-    background-color : white;
+    background-color: white;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -10898,7 +10898,7 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
-input[type=tel]{
+input[type=tel] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -10918,7 +10918,8 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-input[type=email]{
+
+input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -10928,7 +10929,7 @@ input[type=email]{
     box-sizing: border-box;
 }
 
-input[type=password]{
+input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -10938,7 +10939,7 @@ input[type=password]{
     box-sizing: border-box;
 }
 
-input[type=date]{
+input[type=date] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

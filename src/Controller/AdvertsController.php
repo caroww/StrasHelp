@@ -120,4 +120,3 @@ class AdvertsController extends AbstractController
         header('Location:/adverts/index');
     }
 }
-

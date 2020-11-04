@@ -114,4 +114,3 @@ class IdentityController extends AbstractController
         header('Location:/Identity/index');
     }
 }
-

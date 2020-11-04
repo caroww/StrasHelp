@@ -28,7 +28,5 @@ class PublishController extends AbstractController
 
 
         return $this->twig->render('Publish/index.html.twig', ['search_service' => $publish]);
-
     }
-
 }

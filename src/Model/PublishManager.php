@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: sylvain
@@ -26,5 +27,4 @@ class PublishManager extends AbstractManager
     {
         parent::__construct(self::TABLE);
     }
-
 }
