@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Votre commentaire</h1>
+    <div>
+    <h2>Titre : {{ adverts.search_service }}</h2>
+    <h3>Catégorie : {{adverts.id_category}}</h3>
+    <p>Ville : {{ adverts.location}}</p>
+    <p>Note : {{ reviews.rating}} /20</p>
+    <p>Commentaire : {{ reviews.comment}}</p>
+    </div>
+
+    <a href="/reviews/edit/{{ reviews.id }}">Edit</a>
+    <a href="/reviews/delete/{{reviews.id}}">Supprimer</a>
+    <a href="/reviews/index">Back</a>
+ <ul>
+    
+{% endblock %}    

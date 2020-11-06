@@ -1,29 +1,64 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Toutes les annonces</h1>
+   
     <a href="/adverts/add">Publier une annonce</a>
-    <ul>
-        <style>li {
-                list-style: none;
-            }</style>
-        {% for advert in adverts %}
-            <li>
-                <div class="card">
-                    <h5 class="card-header">{{ advert.search_service }}</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ advert.category }}</h5>
-                        <p class="card-text">{{ advert.location }}</p>
-                        <a href="/adverts/show/{{ advert.id }}" class="btn btn-primary">Voir l'annonce</a>
-                    </div>
+
+<div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="row search">                                          
+                <div class="col-xl-6">
+                    <h1>Toutes les annonces</h1>
+                      <ul><style>li {list-style: none;}</style>
+                        {% for advert in adverts %}
+                        <li>    
+
+                            <section id="blog" class="blog">
+                                <div class="container" data-aos="fade-up">
+                                    <div class="row">
+                                        <div class="col-lg-12 entries">                  
+
+                                            <article class="entry">
+                                                <div class="entry-img">
+                                                <!-- Mettre image profil utilisateur -->
+                                                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                                                </div>
+
+                                                <h2 class="entry-title">{{ advert.search_service }}</h2>
+                                                <h3>{{ advert.id_category }}</h3> 
+
+                                                <div >
+                                                <!--<p>{{ advert.id_category }}</p>-->
+                                                    <p>{{ advert.location }}</p>
+                                                </div>              
+
+                                                <div class="entry-content adverts-button row">                      
+                                                    <div class="read-more col-lg-4">
+                                                        <a href="/adverts/show/{{ advert.id }}">Voir l'annonce</a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>    
+
+                        </li>
+                        {% else %}
+                        <li>Nothing to display</li>
+                        {% endfor %}
+                      </ul>                
                 </div>
-            </li>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+
+                
 {% endblock %}
 
 
