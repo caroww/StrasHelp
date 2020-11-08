@@ -28,24 +28,24 @@ class ReviewsManager extends AbstractManager
      * @param array $reviews
      * @return int
      */
-    
+
     public function insert(array $reviews): int
     {
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`id_order`,`rating`,`comment`) 
         VALUES (:id_order, :rating, :comment)");
-        
-        
+
+
         $statement->bindValue('id_order', $reviews['id_order'], PDO::PARAM_INT);
         $statement->bindValue('rating', $reviews['rating'], PDO::PARAM_INT);
         $statement->bindValue('comment', $reviews['comment'], PDO::PARAM_STR);
-      
+
         if ($statement->execute()) {
             return(int)$this->pdo->lastInsertId();
         }
     }
 
-    
+
     /**
      * @param int $id
      */
@@ -62,7 +62,7 @@ class ReviewsManager extends AbstractManager
      * @param array $reviews
      * @return bool
      */
-    public function update(array $reviews):bool
+    public function update(array $reviews): bool
     {
 
         // prepared request
@@ -75,7 +75,7 @@ class ReviewsManager extends AbstractManager
         $statement->bindValue('id_order', $reviews['id_order'], PDO::PARAM_INT);
         $statement->bindValue('rating', $reviews['rating'], PDO::PARAM_INT);
         $statement->bindValue('comment', $reviews['comment'], PDO::PARAM_STR);
-        
+
         return $statement->execute();
     }
 }

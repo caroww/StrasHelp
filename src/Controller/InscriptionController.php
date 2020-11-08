@@ -41,4 +41,12 @@ class InscriptionController extends AbstractController
         };
         return $this->twig->render('Inscription/index.html.twig', ['Inscription' => $Inscription]);
     }
+
+    public function thankyou()
+    {
+        $InscriptionManager = new InscriptionManager();
+        $Inscription = $InscriptionManager->selectAll();
+
+        return $this->twig->render('Inscription/thankyou.html.twig', ['Inscription' => $Inscription]);
+    }
 }

@@ -6,7 +6,6 @@ use App\Model\ReviewsManager;
 use App\Model\AdvertsManager;
 use App\Controller\AdvertsController;
 
-
 /**
  * Class ReviewsController
  */
@@ -48,7 +47,7 @@ class ReviewsController extends AbstractController
 
         return $this->twig->render('Reviews/show.html.twig', ['reviews' => $reviews]);
     }
-    
+
      /**
      * Display reviews edition page specified by $id
      *
@@ -68,7 +67,7 @@ class ReviewsController extends AbstractController
             $reviews['id_order'] = $_POST['id_order'];
             $reviews['rating'] = $_POST['rating'];
             $reviews['comment'] = $_POST['comment'];
-            
+
             $reviewsManager->update($reviews);
         }
         return $this->twig->render('Reviews/edit.html.twig', ['reviews' => $reviews]);
@@ -85,7 +84,7 @@ class ReviewsController extends AbstractController
      */
     public function add()
     {
-        
+
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $reviewsManager = new ReviewsManager();
@@ -98,7 +97,7 @@ class ReviewsController extends AbstractController
             $id = $reviewsManager->insert($reviews);
             header('Location:/reviews/show/' . $id);
         }
-       
+
 
         return $this->twig->render('Reviews/add.html.twig');
     }
