@@ -12,7 +12,7 @@ class AdvertsManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'advert';
+    protected const TABLE = 'advert';
 
     /**
      *  Initializes this class.

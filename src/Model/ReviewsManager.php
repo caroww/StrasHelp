@@ -14,7 +14,7 @@ class ReviewsManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'reviews';
+    protected const TABLE = 'reviews';
 
     /**
      *  Initializes this class.

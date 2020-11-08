@@ -20,7 +20,7 @@ class CategoryManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'category';
+    protected const TABLE = 'category';
 
     /**
      *  Initializes this class.

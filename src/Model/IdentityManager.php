@@ -21,7 +21,7 @@ class IdentityManager extends AbstractManager
     /**
      * Name of the table in the database
      */
-    const TABLE = 'identity';
+    protected const TABLE = 'identity';
 
     /**
      *  Initializes this class.

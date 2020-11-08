@@ -18,7 +18,7 @@ class PublishManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'advert';
+    protected const TABLE = 'advert';
 
     /**
      *  Initializes this class.
