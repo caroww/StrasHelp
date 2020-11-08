@@ -1,12 +1,21 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <h2>Salut vous etes sur la page inscription</h2>
+    <!-- ======= Hero Section = Barre de Recherche ======= -->
+    <section id="herotwo" class="d-flex align-items-center">
 
+        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+            <div class="row justify-content-center" >
+                <div class="col-xl-8">
+                    <div class="row search">
+                        <div class="col-xl-6">
+                            {% include 'Inscription/_form.html.twig' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-    <h1>Add a new item</h1>
-    {% include 'Inscription/_form.html.twig' %}
+    </section><!-- End Hero -->
 
 {% endblock %}
