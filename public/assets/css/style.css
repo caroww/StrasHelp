@@ -421,6 +421,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+/*Fin Ajout STRASHELP*/
 
 @media (max-width: 768px) {
     #hero {
@@ -1568,12 +1569,6 @@ section {
 
 .blog .entry .entry-content p {
     line-height: 24px;
-}
-
-/*Ajout STRASHELP*/
-
-.adverts-button{
-    
 }
 
 .blog .entry .entry-content .read-more {
