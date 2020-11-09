@@ -42,6 +42,7 @@ class ItemManager extends AbstractManager
         if ($statement->execute()) {
             return (int)$this->pdo->lastInsertId();
         }
+        return 0; // Upon failure
     }
 
 

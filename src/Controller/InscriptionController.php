@@ -21,12 +21,12 @@ class InscriptionController extends AbstractController
 
     public function index()
     {
-        $InscriptionManager = new InscriptionManager();
-        $Inscription = $InscriptionManager->selectAll();
+        $inscriptionManager = new InscriptionManager();
+        $inscription = $inscriptionManager->selectAll();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $InscriptionManager = new InscriptionManager();
-            $Inscription = [
+            $inscriptionManager = new InscriptionManager();
+            $inscription = [
                 'firstname' => $_POST['firstname'],
                 'lastname' => $_POST['lastname'],
                 'gender' => $_POST['gender'],
@@ -36,17 +36,17 @@ class InscriptionController extends AbstractController
                 'email' => $_POST['email'],
                 'password' => $_POST['password']
             ];
-            $id = $InscriptionManager->insert($Inscription);
+            $id = $inscriptionManager->insert($inscription);
             header('Location:/Inscription/thankyou/');
         };
-        return $this->twig->render('Inscription/index.html.twig', ['Inscription' => $Inscription]);
+        return $this->twig->render('Inscription/index.html.twig', ['Inscription' => $inscription]);
     }
 
     public function thankyou()
     {
-        $InscriptionManager = new InscriptionManager();
-        $Inscription = $InscriptionManager->selectAll();
+        $inscriptionManager = new InscriptionManager();
+        $inscription = $inscriptionManager->selectAll();
 
-        return $this->twig->render('Inscription/thankyou.html.twig', ['Inscription' => $Inscription]);
+        return $this->twig->render('Inscription/thankyou.html.twig', ['Inscription' => $inscription]);
     }
 }
