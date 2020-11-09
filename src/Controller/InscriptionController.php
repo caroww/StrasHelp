@@ -36,7 +36,7 @@ class InscriptionController extends AbstractController
                 'email' => $_POST['email'],
                 'password' => $_POST['password']
             ];
-            $id = $inscriptionManager->insert($inscription);
+            // $id = $inscriptionManager->insert($inscription);
             header('Location:/Inscription/thankyou/');
         };
         return $this->twig->render('Inscription/index.html.twig', ['Inscription' => $inscription]);
