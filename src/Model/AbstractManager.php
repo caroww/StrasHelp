@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: sylvain
@@ -6,9 +7,8 @@
  * Time: 20:52
  * PHP version 7
  */
-namespace App\Model;
 
-use App\Model\Connection;
+namespace App\Model;
 
 /**
  * Abstract class handling default manager.
@@ -54,7 +54,7 @@ abstract class AbstractManager
     /**
      * Get one row from database by ID.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return array
      */

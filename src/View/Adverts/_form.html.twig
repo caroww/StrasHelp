@@ -1,0 +1,17 @@
+<form method="post">
+    <input type="hidden" value="{{ adverts.id }}" name="id">
+    <input type="hidden" value="{{ adverts.advertStatus }}" name="advertStatus">
+    <label for="category">Catégorie :</label>
+    <input type="text" value="{{ adverts.id_category }}" name="id_category" placeholder="Catégorie"><br/>
+    <label for="searchService">Titre de l'annonce :</label>
+    <input type="text" value="{{ adverts.searchService }}" name="searchService" placeholder="Titre de l'annonce"><br/>
+    <label for="location">Localisation :</label>
+    <input type="text" value="{{ adverts.location }}" name="location" placeholder="Ville"><br/>
+    <label for="duration">Durée :</label>
+    <input type="text" value="{{ adverts.duration }}" name="duration" placeholder="Durée"><br/>
+    <label for="description">Commentaire</label>
+    <textarea value="{{ adverts.description }}" name="description" placeholder="Description"></textarea><br/>
+    <label for="availability">Disponibilités :</label>
+    <input type="text" value="{{ adverts.availability }}" name="availability" placeholder="Disponibilités"><br/>
+    <input type="submit" value="Publier">
+</form>

@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+   
+<section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+
+        {% for advert in adverts %}
+          <h2>{{ advert.name }}</h2>
+           <p>Retrouvez ici toutes les annonces pour la catégorie {{ advert.name|lower }}</p>
+          {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+
+        <div><a href="/category/index"class="get-started-btn scrollto">Revenir aux Catégories</a></div>
+        </div>      
+    
+    <ul>
+        {% for advert in adverts %}
+                    <section id="blog" class="blog">
+                        <div class="container" data-aos="fade-up">
+                            <div class="row">
+                                <div class="col-lg-12 entries">                  
+
+                                    <article class="entry">
+                                        <div class="entry-img">
+                                        <!-- Mettre image profil utilisateur -->
+                                        <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <h2 class="entry-title">{{ advert.search_service }}</h2>
+                                        {{ advert.id_category }}
+
+                                        <div >
+                                            <p>{{ advert.location }}</p>
+                                            <p>Durée : {{ advert.duration }} heure</p>
+                                            <p>Commentaire : {{ advert.description }}</p>
+                                            <p>Mes disponibilités : {{ advert.availability }}</p>
+                                        </div>              
+
+                                        <div class="entry-content adverts-button row d-flex justify-content-end flex-row">                      
+                                            <div class="read-more col-lg-2 p-2 search">
+                                                <a href="/adverts/edit/{{ advert.id }}">Editer</a>
+                                            </div>
+                                            <div class="read-more col-lg-2 p-2 search">
+                                                <a href="/adverts/delete/{{ advert.id }}">Supprimer</a>
+                                            </div>
+                                            <div class="read-more col-lg-3 p-2 search">
+                                                <a href="/adverts/index">Revenir aux Annonces</a>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section> 
+
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+
+     </div>
+</section> 
+    <a href="/category/add">Ajouter</a>
+  
+{% endblock %}
+
+

@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Edit user profile {{ identity.firstname }} {{ identity.lastname }}(ID:{{ identity.id }})</h1>
+    {% include 'Identity/_form.html.twig' %}
+    <a href="/identity/show/{{ identity.id }}">Back</a>
+{% endblock %}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: root
@@ -27,6 +28,7 @@ class ItemController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function index()
     {
         $itemManager = new ItemManager();
@@ -34,7 +36,6 @@ class ItemController extends AbstractController
 
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
-
 
     /**
      * Display item informations specified by $id
@@ -87,7 +88,6 @@ class ItemController extends AbstractController
      */
     public function add()
     {
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $itemManager = new ItemManager();
             $item = [
@@ -95,8 +95,7 @@ class ItemController extends AbstractController
             ];
             $id = $itemManager->insert($item);
             header('Location:/item/show/' . $id);
-        }
-
+        };
         return $this->twig->render('Item/add.html.twig');
     }
 

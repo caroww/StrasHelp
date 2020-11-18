@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Evaluer la prestation</h1>
+    <a href="/reviews/add">Publier un commentaire</a>
+    <ul>
+    <style>li{list-style:none;}</style>
+        {% for review in reviews %}
+            <li>
+                <div class="card">
+                    <h5 class="card-header">{{ advert.search_service}}</h5>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ review.rating }}</h5>
+                                <p class="card-text">{{ review.comment}}</p>
+                            <a href="/reviews/show/{{ review.id }}" class="btn btn-primary">Voir l'annonce</a>
+                        </div>
+                </div>
+            </li>                  
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    
+
+{% endblock %}
+
+
+
+

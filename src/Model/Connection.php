@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Database connection
  *
@@ -11,11 +12,12 @@
 
 namespace App\Model;
 
-use \PDO;
+use PDO;
+use PDOException;
 
 /**
  *
- * This class only make a PDO object instanciation. Use it as below :
+ * This class only make a PDO object instantiation. Use it as below :
  *
  * <pre>
  *  $db = new Connection();
@@ -69,7 +71,7 @@ class Connection
             if (APP_DEV) {
                 $this->pdoConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo('<div class="error">Error !: ' . $e->getMessage() . '</div>');
         }
     }
