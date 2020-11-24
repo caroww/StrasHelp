@@ -1,0 +1,44 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Catégories</h2>
+          <p>Retrouvez ici toutes les catégories des services recherchés.</p>
+        </div>
+       
+        <ul>
+            <div class="row"> 
+
+                {% for category in categorys %}
+
+                    <li class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <a href="/category/showAdvertsCategory/{{ category.id }}"> 
+                            <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-info">
+                                <h4>{{ category.name }}</h4>
+                                    {% if category.image %}
+                                    <img src=('{{ category.image }}')>
+                                    {% endif %}
+                            </div>
+                            </div>                          
+                        </a>
+                    </div>
+                    </li>                                
+                    
+                {% else %}
+                    <li>Nothing to display</li>    
+                {% endfor %}
+
+            </div>
+
+        </ul> 
+          
+    </div>  
+
+</section>      
+ 
+{% endblock %}

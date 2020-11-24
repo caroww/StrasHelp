@@ -1,7 +1,7 @@
 <?php
 
-use Whoops\Run;
 use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 $whoops = new Run();
 $whoops->prependHandler(new PrettyPageHandler());

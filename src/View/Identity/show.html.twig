@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>User Identity Panel</h1>
+    <div>
+        <h2>{{ identity.firstname }} {{ identity.lastname }}</h2>
+        <h3>{{ identity.city }}</h3>
+        <p>Sexe : {{ identity.gender }}</p>
+        <p>Anniversaire : {{ identity.date_of_birth }}</p>
+        <p>Nombre de tel : {{ identity.phone }}</p>
+        <p>Email: {{ identity.email }}</p>
+        <p>Mot de passe: {{ identity.password }}</p>
+    </div>
+
+    <a href="/identity/edit/{{ identity.id }}">Edit</a>
+    <a href="/identity/delete/{{ identity.id }}">Supprimer</a>
+    <a href="/identity/index">Back</a>
+
+{% endblock %}

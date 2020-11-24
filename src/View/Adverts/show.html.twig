@@ -1,0 +1,56 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+   <!-- ======= Blog Section ======= -->
+ <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="row search">                                          
+                <div class="col-xl-6">
+                    <h1>Votre annonce</h1>
+
+                    <section id="blog" class="blog">
+                        <div class="container" data-aos="fade-up">
+                            <div class="row">
+                                <div class="col-lg-12 entries">                  
+
+                                    <article class="entry">
+                                        <div class="entry-img">
+                                        <!-- Mettre image profil utilisateur -->
+                                        <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <h2 class="entry-title">{{ adverts.search_service }}</h2>
+                                   <!-- <h3>{{ adverts.id_category }}</h3> -->
+
+                                        <div >
+                                            <p>{{ adverts.location }}</p>
+                                            <p>Durée : {{ adverts.duration }} heure</p>
+                                            <p>Commentaire : {{ adverts.description }}</p>
+                                            <p>Mes disponibilités : {{ adverts.availability }}</p>
+                                        </div>              
+
+                                        <div class="entry-content adverts-button row">                      
+                                            <div class="read-more col-lg-4">
+                                                <a href="/adverts/edit/{{ adverts.id }}">Editer</a>
+                                            </div>
+                                            <div class="read-more col-lg-4">
+                                                <a href="/adverts/delete/{{ adverts.id }}">Supprimer</a>
+                                            </div>
+                                            <div class="read-more col-lg-4">
+                                                <a href="/adverts/index">Revenir aux Annonces</a>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+{% endblock %}

@@ -1,5 +1,244 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
-{% endblock %}
+
+  <!-- ======= Hero Section = Barre de Recherche ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row search">                                          
+                        <div class="col-xl-6">
+                          <h1 class="slogan">L'Entr'aide près de chez vous !</h1>
+                                <form>
+                                  <div class="form-group">
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ou?">
+                                  </div>
+                                  <div class="form-group">                                    
+                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Quoi?">
+                                  </div>                             
+                              </form>
+                              <a href="#about" class="btn-get-started scrollto">PUBLIER UNE ANNONCE</a>
+                              <a href="#about" class="btn-get-started scrollto">RECHERCHER</a>
+                          </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
+
+<!-- ======= Counts Section = STEP ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="icofont-simple-smile">1</i>
+              <span data-toggle="counter-up">J'ai besoin d'aide</span>
+              <p>Je publie une annonce</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="icofont-document-folder">2</i>
+              <span data-toggle="counter-up">Je sais faire</span>
+              <p>Je propose mon aide</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="icofont-live-support">3</i>
+              <span data-toggle="counter-up">On se rencontre</span>
+              <p>Et on s'arrange ensemble</p>
+            </div>
+          </div>        
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+   
+
+    <!-- ======= Team Section = CATEGORY ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Catégories</h2>
+          <p>Retrouvez ici toutes les catégories des services recherchés.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Cuisine</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/1" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Bricolage</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/2" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Cours</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/3" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Administratif</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/6" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>                
+        </div>
+
+         <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Sport</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/7" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Ménage</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/8" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Informatique</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/9" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-info">
+                <h4>Jardinage</h4>
+              </div>
+              <div class="member-img">
+                <a href="/category/showAdvertsCategory/10" class="btn btn-primary"><img src="menage.png"></a>
+              </div>
+              
+            </div>
+          </div>                
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </section><!-- End Team Section -->
+
+        <!-- ======= Contact Section = SITE MAP ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Plan du Site</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+
+        <div class="container">
+        <div class="row">
+
+          
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Rechercher</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Membres</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Avis</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mentions légales</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Déposer une annonce</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Connexion</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
+            </ul>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    
+    </section><!-- End Contact Section -->
+    
+    
+    
+    
+    
+    
+    
+    {% endblock %}
