@@ -1,4 +1,4 @@
-# Projet 2 : STRASHELP
+# Projet 2 à la Wild Code School (5 semaines) : STRASHELP
 
 ## Projet (fictif) - Plateforme d'entraide communautaire 
 
