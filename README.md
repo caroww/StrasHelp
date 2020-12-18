@@ -7,7 +7,7 @@ Création d'un site d'échange de services pour une association avec : espace me
 ## Démonstration des fonctionnalités en video
 
 
-&nbsp;---&nbsp;
+&nbsp; --- &nbsp;
 
 # Simple MVC
 
