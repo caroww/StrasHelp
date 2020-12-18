@@ -1,3 +1,16 @@
+# Projet 2 à la Wild Code School (5 semaines) : STRASHELP
+
+## Projet (fictif) - Plateforme d'entraide communautaire 
+
+Création d'un site d'échange de services pour une association avec : espace membre - espace administrateur - moteur de recherche - classement des annonces - formulaire de contact - intégration du MVC - POO - CRUD - mise en place des sprint
+
+## Démonstration des fonctionnalités en video
+
+
+&nbsp; 
+--- 
+&nbsp;
+
 # Simple MVC
 
 ## Description
