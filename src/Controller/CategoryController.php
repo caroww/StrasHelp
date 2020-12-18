@@ -126,7 +126,7 @@ class CategoryController extends AbstractController
     {
         $categoryManager = new CategoryManager();
         $adverts = $categoryManager->selectAdvertsByCategory($id);
-        
+
         return $this->twig->render('Category/showAdvertsCategory.html.twig', ['adverts' => $adverts]);
     }
 }
