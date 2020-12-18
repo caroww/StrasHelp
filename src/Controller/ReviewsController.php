@@ -93,7 +93,6 @@ class ReviewsController extends AbstractController
                 'rating' => $_POST['rating'],
                 'comment' => $_POST['comment'],
             ];
-            var_dump($reviews);
             $id = $reviewsManager->insert($reviews);
             header('Location:/reviews/show/' . $id);
         }

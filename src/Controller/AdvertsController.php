@@ -3,13 +3,13 @@
 namespace App\Controller;
 
 use App\Model\AdvertsManager;
+use App\Model\CategoryManager;
 
 /**
  * Class AdvertsController
  */
 class AdvertsController extends AbstractController
 {
-
 
     /**
      * Display Adverts listing
@@ -23,7 +23,8 @@ class AdvertsController extends AbstractController
     public function index()
     {
         $advertsManager = new AdvertsManager();
-        $adverts = $advertsManager->selectAll();
+        $adverts = $advertsManager->selectAllByIdDesc();
+
 
         return $this->twig->render('Adverts/index.html.twig', ['adverts' => $adverts]);
     }
@@ -86,21 +87,19 @@ class AdvertsController extends AbstractController
      */
     public function add()
     {
-
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $advertsManager = new AdvertsManager();
             $adverts = [
                 'advertStatus' => $_POST['advertStatus'],
                 'searchService' => $_POST['searchService'],
-                'id_category' => 1,
+                'id_category' => $_POST['id_category'],
                 'location' => $_POST['location'],
                 'duration' => $_POST['duration'],
                 'description' => $_POST['description'],
                 'availability' => $_POST['availability'],
-                'id_applicant' => 1
-
+                'id_applicant' => implode($_SESSION['id'])
             ];
+
             $id = $advertsManager->insert($adverts);
             header('Location:/adverts/show/' . $id);
         };

@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Votre annonce</h1>
+    <div>
+        <h2>ID : {{ order.id }}</h2>
+        <h3>id_catory : {{order.id_category}}</h3>
+        <p>id_receiver : {{ order.id_receiver}} heure</p>
+        <p>id_advert : {{ order.id_advert}}</p>
+        <p>validated : {{ order.validated}}</p>
+    </div>
+
+    <a href="/order/edit/{{ order.id }}">Edit</a>
+    <a href="/order/delete/{{order.id}}">Supprimer</a>
+    <a href="/order/index">Back</a>
+
+
+{% endblock %}

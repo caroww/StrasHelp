@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Formulaire de Contact</h1>
+    <ul>
+        {% for contact in contacts %}
+            <li><a href="/contact/show/{{ contact.id }}">{{ contact.id }}. {{ contact.name }}</a></li>
+            <li><a href="/contact/show/{{ contact.id }}">{{ contact.id }}. {{ contact.email }}</a></li>
+            <li><a href="/contact/show/{{ contact.id }}">{{ contact.id }}. {{ contact.subject }}</a></li>
+        {% else %}
+            <li>Rien à afficher</li>
+        {% endfor %}
+    </ul>
+    <a href="/contact/add">Ajouter</a>
+{% endblock %}

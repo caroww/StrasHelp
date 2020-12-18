@@ -6,15 +6,15 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
 
-        {% for advert in adverts %}
-          <h2>{{ advert.name }}</h2>
+         {% for advert in adverts|slice(0,1) %} 
+            <h2>{{ advert.name }}</h2>
            <p>Retrouvez ici toutes les annonces pour la catégorie {{ advert.name|lower }}</p>
           {% else %}
             <li>Nothing to display</li>
         {% endfor %}
-
+         </br>
         <div><a href="/category/index"class="get-started-btn scrollto">Revenir aux Catégories</a></div>
-        </div>      
+        </div>          
     
     <ul>
         {% for advert in adverts %}
@@ -23,28 +23,22 @@
                             <div class="row">
                                 <div class="col-lg-12 entries">                  
 
-                                    <article class="entry">
+                                    <article class="entry adverthelp">
                                         <div class="entry-img">
-                                        <!-- Mettre image profil utilisateur -->
                                         <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
                                         </div>
-                                        <h2 class="entry-title">{{ advert.search_service }}</h2>
-                                        {{ advert.id_category }}
+                                        <h2 class="entry-title h2adverthelp">{{ advert.search_service }}</h2>
+                                        <h3 class="entry-title h2adverthelp">{{ advert.name }}</h3>
+                                        
 
                                         <div >
-                                            <p>{{ advert.location }}</p>
-                                            <p>Durée : {{ advert.duration }} heure</p>
-                                            <p>Commentaire : {{ advert.description }}</p>
-                                            <p>Mes disponibilités : {{ advert.availability }}</p>
+                                            <p class="padverthelp">{{ advert.location }}</p>
+                                            <p class="padverthelp">Durée : {{ advert.duration }} heure</p>
+                                            <p class="padverthelp">Commentaire : {{ advert.description }}</p>
+                                            <p class="padverthelp">Mes disponibilités : {{ advert.availability }}</p>
                                         </div>              
 
                                         <div class="entry-content adverts-button row d-flex justify-content-end flex-row">                      
-                                            <div class="read-more col-lg-2 p-2 search">
-                                                <a href="/adverts/edit/{{ advert.id }}">Editer</a>
-                                            </div>
-                                            <div class="read-more col-lg-2 p-2 search">
-                                                <a href="/adverts/delete/{{ advert.id }}">Supprimer</a>
-                                            </div>
                                             <div class="read-more col-lg-3 p-2 search">
                                                 <a href="/adverts/index">Revenir aux Annonces</a>
                                             </div>
@@ -63,7 +57,6 @@
 
      </div>
 </section> 
-    <a href="/category/add">Ajouter</a>
   
 {% endblock %}
 

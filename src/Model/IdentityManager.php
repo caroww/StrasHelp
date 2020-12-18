@@ -33,7 +33,6 @@ class IdentityManager extends AbstractManager
 
     /**
      * @param array $identity
-     * @return bool
      */
     public function insert(array $identity)
     {
@@ -51,6 +50,10 @@ city, phone, email, password) VALUES (0, 0, :firstname, :lastname, :gender, :dat
         $statement->bindValue(':phone', $identity['phone'], PDO::PARAM_STR);
         $statement->bindValue(':email', $identity['email'], PDO::PARAM_STR);
         $statement->bindValue(':password', md5($identity['password']), PDO::PARAM_STR);
+
+        if ($statement->execute()) {
+            return (int)$this->pdo->lastInsertId();
+        }
 
         return $statement->execute();
     }
@@ -73,7 +76,7 @@ city, phone, email, password) VALUES (0, 0, :firstname, :lastname, :gender, :dat
      * @param array $identity
      * @return bool
      */
-    public function update(array $identity): bool
+    public function update(array $identity)
     {
         $query = "UPDATE Identity SET firstname=:firstname, lastname=:lastname, 
 gender=:gender, date_of_birth=:date_of_birth, city=:city, phone=:phone, email=:email, 

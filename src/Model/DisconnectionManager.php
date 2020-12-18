@@ -13,12 +13,9 @@ namespace App\Model;
 /**
  *
  */
-class PublishManager extends AbstractManager
+class DisconnectionManager extends AbstractManager
 {
-    /**
-     *
-     */
-    protected const TABLE = 'advert';
+    protected const TABLE = 'identity';
 
     /**
      *  Initializes this class.

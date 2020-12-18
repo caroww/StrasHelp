@@ -1,31 +1,61 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>All users (by order of creation)</h1>
-    <h4><a href="/identity/add">Create a user</a></h4>
-    <br>
-    <ul>
-        <style>li {
-                list-style: none;
-            }</style>
-        {% for user in identity %}
-            <li>
-                <div class="card">
-                    <h5 class="card-header">{{ user.firstname }} {{ user.lastname }}</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ user.city }}</h5>
-                        <p class="card-text">Email: {{ user.email }}</p>
-                        <a href="/identity/show/{{ user.id }}" class="btn btn-primary">Show user info</a>
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+
+                <h2>Utilisateurs</h2>
+                <p>Retrouvez ici toutes les utilisateurs</p>
+
+                </br>
+            </div>
+
+                                    {% for user in identity %}
+                                        <li>
+                                            <section id="blog" class="blog">
+                                                <div class="container" data-aos="fade-up">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 entries">
+                                                            <article class="entry adverthelp">
+
+                                                                <h2 class="entry-title h2adverthelp">{{ user.firstname }} {{ user.lastname }}</h2>
+                                                                <p class="padverthelp">Admin: {{ user.isAdmin }}
+                                                                    <small>(0 - Non / 1 - Oui)</small>
+                                                                </p>
+                                                                <p class="padverthelp">Statut du compte: {{ user.accountStatus }}
+                                                               <small>(0 - En attente / 1 - Accepté / 2 - Bannit)</small>
+                                                                </p>
+                                                                <p class="padverthelp">Ville: {{ user.city }}</p>
+                                                                <p class="padverthelp">Email: {{ user.email }}</p>
+                                                                <p class="padverthelp">Telephone: {{ user.phone }}</p>
+                                                                <p class="padverthelp">Credit: {{ user.credit }}</p>
+                                                                <p class="padverthelp">Annonces: {{ user.publications }}</p>
+
+
+
+                                                                <div class="entry-content adverts-button row d-flex justify-content-end flex-row">
+                                                                        <div class="read-more col-lg-3 p-2 search">
+                                                                            <a href="/identity/show/{{ user.id }}">Voir l'utilisateur</a>
+                                                                        </div>
+                                                                    </div>
+                                                            </article>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </li>
+                                    {% else %}
+                                        <li>Nothing to display</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <br>
-            </li>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    </ul>
-
-
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 

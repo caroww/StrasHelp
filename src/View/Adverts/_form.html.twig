@@ -1,17 +1,46 @@
-<form method="post">
-    <input type="hidden" value="{{ adverts.id }}" name="id">
-    <input type="hidden" value="{{ adverts.advertStatus }}" name="advertStatus">
-    <label for="category">Catégorie :</label>
-    <input type="text" value="{{ adverts.id_category }}" name="id_category" placeholder="Catégorie"><br/>
-    <label for="searchService">Titre de l'annonce :</label>
-    <input type="text" value="{{ adverts.searchService }}" name="searchService" placeholder="Titre de l'annonce"><br/>
-    <label for="location">Localisation :</label>
-    <input type="text" value="{{ adverts.location }}" name="location" placeholder="Ville"><br/>
-    <label for="duration">Durée :</label>
-    <input type="text" value="{{ adverts.duration }}" name="duration" placeholder="Durée"><br/>
-    <label for="description">Commentaire</label>
-    <textarea value="{{ adverts.description }}" name="description" placeholder="Description"></textarea><br/>
-    <label for="availability">Disponibilités :</label>
-    <input type="text" value="{{ adverts.availability }}" name="availability" placeholder="Disponibilités"><br/>
-    <input type="submit" value="Publier">
-</form>
+<div class="signup-form">
+
+    <form class="form-horizontal" method="post">
+        <div class="col-xs-8 col-xs-offset-4">
+            <h2>Publier</h2>
+        </div>
+        <input type="hidden" value="0" name="advertStatus">
+        <!--     <input type="hidden" value="{{ adverts.advertStatus }}" name="advertStatus"> -->
+
+        <label class="control-label col-xs-4" for="category">Catégorie :</label>
+        
+        <select name="id_category" id="id_category">
+            <option value="1" >Cuisine</option>
+            <option value="2" >Bricolage</option>
+            <option value="3" >Cours</option>
+            <option value="4" >Administratif</option>
+            <option value="5" >Sport</option>
+            <option value="6" >Ménage</option>
+            <option value="7" >Informatique</option>
+            <option value="8" >Jardinage</option>                
+        </select>
+
+        <input type="hidden" class="form-control" type="text" value="{{ adverts.id_applicant }}" name="id_applicant"
+               placeholder="ID Applicant"><br/>
+
+        <label class="control-label col-xs-4" for="searchService">Titre de l'annonce :</label>
+        <input class="form-control" type="text" value="{{ adverts.searchService }}" name="searchService"
+               placeholder="Titre de l'annonce"><br/>
+
+        <label class="control-label col-xs-4" for="location">Localisation :</label>
+        <input class="form-control" type="text" value="{{ adverts.location }}" name="location" placeholder="Ville"><br/>
+
+        <label class="control-label col-xs-4" for="duration">Durée :</label>
+        <input class="form-control" type="text" value="{{ adverts.duration }}" name="duration" placeholder="Durée"><br/>
+
+        <label class="control-label col-xs-4" for="description">Commentaire</label>
+        <textarea class="form-control" value="{{ adverts.description }}" name="description"
+                  placeholder="Description"></textarea><br/>
+
+        <label class="control-label col-xs-4" for="availability">Disponibilités :</label>
+        <input class="form-control" type="text" value="{{ adverts.availability }}" name="availability"
+               placeholder="Disponibilités"><br/>
+
+        <input class="btn btn-danger" type="submit" value="Publier">
+    </form>
+</div>

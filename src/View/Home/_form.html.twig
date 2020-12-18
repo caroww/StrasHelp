@@ -1,0 +1,29 @@
+{% block content %}
+  <!-- ======= Hero Section = Barre de Recherche ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row search">                                          
+                        <div class="col-xl-6">
+                          <h1 class="slogan">L'Entr'aide près de chez vous !</h1>
+                                <form action="" method="POST">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="searchWhere" name="searchWhere" aria-describedby="emailHelp" placeholder="Où?" required>
+                                  </div>
+                                  <div class="form-group">                                    
+                                      <input type="text" class="form-control" id="searchWhat" name="searchWhat" placeholder="Quoi?" required>
+                                  </div>                         
+                              <a href="#about" class="btn-get-started scrollto">PUBLIER UNE ANNONCE</a>
+                              <input type="submit" class="btn-get-started scrollto" value="RECHERCHER">
+     
+                          </form>
+                          </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
+{% endblock %}

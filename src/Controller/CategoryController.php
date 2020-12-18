@@ -34,8 +34,7 @@ class CategoryController extends AbstractController
     {
         $categoryManager = new CategoryManager();
         $categorys = $categoryManager->selectImagesAndCategory();
-        //var_dump($categorys);
-        //echo $categorys[0]['image'];
+
         return $this->twig->render('Category/index.html.twig', ['categorys' => $categorys]);
     }
 
@@ -127,7 +126,7 @@ class CategoryController extends AbstractController
     {
         $categoryManager = new CategoryManager();
         $adverts = $categoryManager->selectAdvertsByCategory($id);
-
+        
         return $this->twig->render('Category/showAdvertsCategory.html.twig', ['adverts' => $adverts]);
     }
 }

@@ -1,6 +1,17 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Add a new adverts</h1>
-    {% include 'Adverts/_form.html.twig' %}
+    <!-- ======= Hero Section = Barre de Recherche ======= -->
+    <section id="herothree" class="d-flex align-items-center">
+        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="row search">
+                        {% include 'Adverts/_form.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
 {% endblock %}

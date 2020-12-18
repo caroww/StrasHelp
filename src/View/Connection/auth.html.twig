@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<!-- ======= Hero Section = Barre de Recherche ======= -->
+<section id="heroconnection" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-xl-8"><br>
+                <div class="row search">
+                    {% include 'Connection/_form.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+{% endblock %}

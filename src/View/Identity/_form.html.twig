@@ -1,37 +1,69 @@
-<form method="post">
+<div class="signup-form">
+    <form class="form-horizontal" method="post">
 
-    <label for="firstname">Prénom :</label>
-    <input type="text" value="{{ identity.firstname }}" name="firstname"><br/>
+        <div class="col-xs-8 col-xs-offset-4">
+            <h2>{{ identity.firstname }} {{ identity.lastname }}</h2>
+        </div>
 
-    <label for="lastname">Nom :</label>
-    <input type="text" value="{{ identity.lastname }}" name="lastname"><br/>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="isAdmin">Admin :</label>
+            <input type="text" value="{{ identity.isAdmin }}" name="isAdmin" class="form-control"><br/>
+        </div>
 
-    <label for="gender">Sexe: </label>
-    <select id="gender" name="gender">
-        <option value="{{ identity.gender }}">{{ identity.genderDisplay }}</option>
-        <option value="male">Masculin</option>
-        <option value="female">Femelle</option>
-    </select><br>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="accountStatus">Account Status :</label>
+            <input type="text" value="{{ identity.accountStatus }}" name="accountStatus" class="form-control"><br/>
+        </div>
 
-    <label for="date_of_birth">Date de naissance: </label>
-    <input type="date" id="date_of_birth" name="date_of_birth"
-           value="{{ identity.date_of_birth }}" min="1900-01-01" max="2003-12-31"><br>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="firstname">Prénom :</label>
+            <input type="text" value="{{ identity.firstname }}" name="firstname" class="form-control"><br/>
+        </div>
 
-    <label for="city">Ville :</label>
-    <input type="text" value="{{ identity.city }}" name="city"><br/>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="lastname">Nom :</label>
+            <input type="text" value="{{ identity.lastname }}" name="lastname" class="form-control"><br/>
+        </div>
 
-    <label for="phone">Numéro de téléphone: </label>
-    <input type="tel" id="phone" name="phone"
-           pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
-           value="{{ identity.phone }}">
-    <small>Ex: 0612345678</small><br>
+        <div class="form-group">
+            <label for="gender">Sexe: </label>
+            <select id="gender" name="gender" class="form-control">
+                <option value="{{ identity.gender }}">{{ identity.genderDisplay }}</option>
+                <option value="male">Masculin</option>
+                <option value="female">Féminin</option>
+            </select>
+        </div>
 
-    <label for="email">E-mail: </label>
-    <input type="email" id="email" name="email" value="{{ identity.email }}"><br>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="date_of_birth">Date de naissance: </label>
+            <input type="date" id="date_of_birth" name="date_of_birth"
+                   value="{{ identity.date_of_birth }}" min="1900-01-01" max="2003-12-31" class="form-control">
+        </div>
 
-    <label for="password">Mot de passe </label>
-    <input type="password" id="password" name="password" value="{{ identity.password }}"><br>
+        <div class="form-group">
+            <label for="city">Ville :</label>
+            <input type="text" value="{{ identity.city }}" class="form-control" name="city">
+        </div>
 
-    <input type="submit" value="S'inscrire">
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="phone">Numéro de téléphone: </label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"
+                   value="{{ identity.phone }}" class="form-control">
+            <small>Ex: 0612345678</small><br>
+        </div>
 
-</form>
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="email">E-mail: </label>
+            <input type="email" id="email" name="email" value="{{ identity.email }}" class="form-control"><br>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-4" for="password">Mot de passe </label>
+            <input type="password" id="password" name="password" value="{{ identity.password }}"
+                   class="form-control"><br>
+        </div>
+
+        <input type="submit" class="btn btn-danger" value="Mettre à jour">
+    </form>
+</div>

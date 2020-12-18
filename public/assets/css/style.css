@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
 /**
 * Template Name: Presento - v1.0.0
 * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
@@ -25,6 +27,12 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
+}
+
+/* Ajout STRASHELP */
+
+li{
+    list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -418,7 +426,7 @@ h1, h2, h3, h4, h5, h6 {
 #herotwo {
     text-align: left;
     width: 100%;
-    height: 124vh;
+    height: 127vh;
     background: url("../images/inscription.jpg") top center no-repeat;
     background-size: cover;
     position: relative;
@@ -435,9 +443,148 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
 }
 
+#heroconnection {
+    text-align: left;
+    width: 100%;
+    height: 67vh;
+    background: url("../images/inscription.jpg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 82px;
+}
+
+#heroconnection:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#herothree {
+    text-align: left;
+    width: 100%;
+    height: 106vh;
+    background: url("../images/publier.jpeg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 82px;
+}
+
+#herothree:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#herothree .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #e03a3c;
+    border: 2px solid #e03a3c;
+}
+
+#herothree .btn-get-started:hover {
+    background: transparent;
+    border-color: #fff;
+}
+
+#herocontact {
+    text-align: left;
+    width: 100%;
+    height: 84vh;
+    background: url("../images/publier.jpeg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 82px;
+}
+
+#herocontact:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#herocontact .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #e03a3c;
+    border: 2px solid #e03a3c;
+}
+
+#herocontact .btn-get-started:hover {
+    background: transparent;
+    border-color: #fff;
+}
+
+#heromemberspace {
+    text-align: left;
+    width: 100%;
+    height: 135vh;
+    background: url("../images/publier.jpeg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 82px;
+}
+
+#heromemberspace:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#heromemberspace .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #e03a3c;
+    border: 2px solid #e03a3c;
+}
+
+#heromemberspace .btn-get-started:hover {
+    background: transparent;
+    border-color: #fff;
+}
 
 body {
-    color: #999;
+    color: black;
     background: #f3f3f3;
     font-family: 'Roboto', sans-serif;
 }
@@ -471,7 +618,7 @@ body {
 }
 
 .signup-form form {
-    color: #999;
+    color: black;
     border-radius: 3px;
     margin-bottom: 15px;
     background: #fff;
@@ -486,6 +633,7 @@ body {
 .signup-form label {
     font-weight: normal;
     font-size: 17px;
+    color: black;
 }
 
 .signup-form input[type="checkbox"] {
@@ -1145,7 +1293,7 @@ section {
 
 .testimonials .testimonial-item h4 {
     font-size: 14px;
-    color: #999;
+    color: black;
     margin: 0;
 }
 
@@ -1427,6 +1575,14 @@ section {
     bottom: 15px;
 }
 
+/* Ajout Strashelp */
+
+.categoryh4 {
+    text-align:center;
+}
+
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1546,6 +1702,25 @@ section {
 .contact .php-email-form button[type="submit"]:hover {
     background: #e35052;
 }
+
+/*Ajout STRASHELP*/
+
+.maptitle{
+    color: #333;
+    margin: 0 0 30px 0;
+    display: inline-block;
+    padding: 0 30px 10px 0;
+    border-bottom: 3px solid #df4759;    
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;           
+}
+
+.mapul{
+    padding:2px;
+}
+
+
 
 @-webkit-keyframes animate-loading {
     0% {
@@ -2174,6 +2349,18 @@ section {
     font-size: 14px;
 }
 
+/*Ajout Strashelp*/
+
+.adverthelp {    
+    background:white;
+    box-shadow: 30px 40px 16px rgba(51, 223, 16, 0.1);
+}
+
+.h2adverthelp, .h3adverthelp, .padverthelp {
+    color:rgb(26, 25, 25);
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -2199,6 +2386,9 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 span {
+    color: #e03a3c;
+}
+span {
     color: #e03a3c;
 }
 
@@ -2338,3 +2528,165 @@ section {
     text-decoration: none;
 }
 
+#weather_wrapper {
+    width: 200px;
+}
+.weatherCard {
+    width: 200px;
+    height: 200px;
+    font-family: 'Open Sans';
+    position: relative;
+}
+.currentTemp {
+    padding-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.currentWeather {
+    width: 180px;
+    height: 200px;
+    background: #000;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.temp {
+    font-size: 80px;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+    color: #000;
+    padding: 20px 0 0;
+}
+.location {
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    display: block;
+}
+.conditions {
+    font-family: weathericons;
+    font-size: 80px;
+    display: block;
+    padding: 20px 0 0;
+    text-align: center;
+}
+.info {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #2ab2ea;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+/* Getting really annoying --------------------------------------------------*/
+#wrapper {
+    width: 100px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 10px solid #aaa;
+    border-radius: 15px;
+    background-clip: padding-box;
+    text-align: center;
+}
+.button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    background-image: linear-gradient(top, #fff, #f0f0f0);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    color: #666;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.button:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay.light {
+    background: rgba(255, 255, 255, 0.5);
+}
+.overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #666;
+    width: 245px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.light .popup {
+    border-color: #aaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+.popup h2 {
+    margin-top: 0;
+    color: #666;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+}
+.popup .close:hover {
+    opacity: 1;
+}
+.popup .content {
+    max-height: 200px;
+    overflow: hidden
+}
+.popup p {
+    margin: 0 0 1em;
+}
+.popup p:last-child {
+    margin: 0;
+}

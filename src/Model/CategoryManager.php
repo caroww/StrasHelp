@@ -81,9 +81,8 @@ class CategoryManager extends AbstractManager
      */
     public function selectAdvertsByCategory(int $id): array
     {
-        //echo $id;
         return $this->pdo->query('SELECT * FROM advert a join category c 
-        on a.id_category=c.id where c.id=' . $id)->fetchAll();
+        on a.id_category=c.id where c.id=' . $id . ' ORDER BY a.id DESC')->fetchAll();
     }
 
     /**
@@ -93,7 +92,6 @@ class CategoryManager extends AbstractManager
      */
     public function selectImagesAndCategory(): array
     {
-        //echo $id;
         return $this->pdo->query('SELECT * FROM imgcat i right join category c on i.id=c.id_imgcategory')->fetchAll();
     }
 }

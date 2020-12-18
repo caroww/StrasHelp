@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Editer l'annonce {{ order.id}}</h1>
+    {% include 'order/_form.html.twig' %}
+    <a href="/order/show/{{ order.id }}">Back</a>
+{% endblock %}

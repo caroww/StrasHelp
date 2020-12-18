@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Toutes les annonces</h1>
+    <a href="/order/add">Publier une annonce</a>
+    <ul>
+        <style>li{list-style:none;}</style>
+        {% for ord in order %}
+            <li>
+                <div class="card">
+                    <h5 class="card-header">{{ ord.id }}</h5>
+                    <div class="card-body">
+                        <a href="/order/show/{{ ord.id }}" class="btn btn-primary">Voir l'annonce</a>
+                    </div>
+                </div>
+            </li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

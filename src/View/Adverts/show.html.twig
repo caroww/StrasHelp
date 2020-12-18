@@ -3,42 +3,56 @@
 {% block content %}
 
    <!-- ======= Blog Section ======= -->
- <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
-    <div class="row justify-content-center">
-        <div class="col-xl-10">
-            <div class="row search">                                          
-                <div class="col-xl-6">
-                    <h1>Votre annonce</h1>
+<section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+
+          <h2>Votre annonce</h2>
+           <p>Retrouvez ici l'annonce : {{ adverts.search_service }} </p>
+
+        </br>
+        <div><a href="/adverts/index"class="get-started-btn scrollto">Revenir aux Annonces</a></div>
+        </div>
 
                     <section id="blog" class="blog">
                         <div class="container" data-aos="fade-up">
                             <div class="row">
-                                <div class="col-lg-12 entries">                  
+                                <div class="col-lg-12 entries">
 
-                                    <article class="entry">
+                                    <article class="entry adverthelp">
                                         <div class="entry-img">
-                                        <!-- Mettre image profil utilisateur -->
                                         <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
                                         </div>
-                                        <h2 class="entry-title">{{ adverts.search_service }}</h2>
-                                   <!-- <h3>{{ adverts.id_category }}</h3> -->
+
+                                        <h2 style="display: inline" class="entry-title h2adverthelp">{{ adverts.search_service }}</h2>
+                                        {% if adverts.id_category == 1 %}
+                                            <h3 class="h3adverthelp">Cuisine</h3>
+                                        {% elseif adverts.id_category == 2 %}
+                                            <h3 class="h3adverthelp">Bricolage</h3>
+                                        {% elseif adverts.id_category == 3 %}
+                                            <h3 class="h3adverthelp">Cours</h3>
+                                        {% elseif adverts.id_category == 4 %}
+                                            <h3 class="h3adverthelp">Administratif</h3>
+                                        {% elseif adverts.id_category == 5 %}
+                                            <h3 class="h3adverthelp">Sport</h3>
+                                        {% elseif adverts.id_category == 6 %}
+                                            <h3 class="h3adverthelp">Ménage</h3>
+                                        {% elseif adverts.id_category == 7 %}
+                                            <h3 class="h3adverthelp">Informatique</h3>
+                                        {% elseif adverts.id_category == 8 %}
+                                            <h3 class="h3adverthelp">Jardinage</h3>
+                                        {% endif %}
 
                                         <div >
-                                            <p>{{ adverts.location }}</p>
-                                            <p>Durée : {{ adverts.duration }} heure</p>
-                                            <p>Commentaire : {{ adverts.description }}</p>
-                                            <p>Mes disponibilités : {{ adverts.availability }}</p>
-                                        </div>              
+                                            <p class="padverthelp">{{ adverts.location }}</p>
+                                            <p class="padverthelp">Durée : {{ adverts.duration }} h</p>
+                                            <p class="padverthelp">Commentaire : {{ adverts.description }}</p>
+                                            <p class="padverthelp">Mes disponibilités : {{ adverts.availability }}</p>
+                                        </div>
 
-                                        <div class="entry-content adverts-button row">                      
-                                            <div class="read-more col-lg-4">
-                                                <a href="/adverts/edit/{{ adverts.id }}">Editer</a>
-                                            </div>
-                                            <div class="read-more col-lg-4">
-                                                <a href="/adverts/delete/{{ adverts.id }}">Supprimer</a>
-                                            </div>
-                                            <div class="read-more col-lg-4">
-                                                <a href="/adverts/index">Revenir aux Annonces</a>
+                                        <div class="entry-content adverts-button row d-flex justify-content-end flex-row">
+                                            <div class="read-more col-lg-3 p-2 search">
+                                                <a href="/adverts/index">Aider !</a>
                                             </div>
                                         </div>
                                     </article>
@@ -52,5 +66,7 @@
         </div>
     </div>
 </div>
-            
+</div>
+</section>
+
 {% endblock %}

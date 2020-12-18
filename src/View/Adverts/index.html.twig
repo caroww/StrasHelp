@@ -1,64 +1,75 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-   
-    <a href="/adverts/add">Publier une annonce</a>
 
-<div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
-    <div class="row justify-content-center">
-        <div class="col-xl-10">
-            <div class="row search">                                          
-                <div class="col-xl-6">
-                    <h1>Toutes les annonces</h1>
-                      <ul><style>li {list-style: none;}</style>
-                        {% for advert in adverts %}
-                        <li>    
+<section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+        
+          <h2>Annonces</h2>
+           <p>Retrouvez ici toutes les annonces publiées</p>
+          
+        </br>
+        <div><a href="/category/index" class="get-started-btn scrollto">Revenir aux Catégories</a></div>
+        </div> 
+                <ul>
+                            {% for advert in adverts %}
+                                <li>
+                                    <section id="blog" class="blog">
+                                        <div class="container" data-aos="fade-up">
+                                            <div class="row">
+                                                <div class="col-lg-12 entries">
+                                                    <article class="entry adverthelp">
+                                                      
+                                                        <h2 class="entry-title h2adverthelp">{{ advert.search_service }}</h2>
+                                                        {% if advert.id_category == 1 %}
+                                                            <h3 class="h3adverthelp">Cuisine</h3>
+                                                        {% elseif advert.id_category == 2 %}
+                                                            <h3 class="h3adverthelp">Bricolage</h3>
+                                                        {% elseif advert.id_category == 3 %}
+                                                            <h3 class="h3adverthelp">Cours</h3>
+                                                        {% elseif advert.id_category == 4 %}
+                                                            <h3 class="h3adverthelp">Administratif</h3>
+                                                        {% elseif advert.id_category == 5 %}
+                                                            <h3 class="h3adverthelp">Sport</h3>
+                                                        {% elseif advert.id_category == 6 %}
+                                                            <h3 class="h3adverthelp">Ménage</h3>
+                                                        {% elseif advert.id_category == 7 %}
+                                                            <h3 class="h3adverthelp">Informatique</h3>
+                                                        {% elseif advert.id_category == 8 %}
+                                                            <h3 class="h3adverthelp">Jardinage</h3>
+                                                        {% endif %}
+                                                        <div>
+                                                            <p class="padverthelp">{{ advert.location }}</p>
+                                                            <p class="padverthelp">{{ advert.description }}</p>
+                                                        </div>
 
-                            <section id="blog" class="blog">
-                                <div class="container" data-aos="fade-up">
-                                    <div class="row">
-                                        <div class="col-lg-12 entries">                  
-
-                                            <article class="entry">
-                                                <div class="entry-img">
-                                                <!-- Mettre image profil utilisateur -->
-                                                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                                                        <div class="entry-content adverts-button row d-flex justify-content-end flex-row">
+                                                            <div class="read-more col-lg-3 p-2 search">
+                                                                <a href="/adverts/show/{{ advert.id }}">Voir l'annonce</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
                                                 </div>
-
-                                                <h2 class="entry-title">{{ advert.search_service }}</h2>
-                                                <h3>{{ advert.id_category }}</h3> 
-
-                                                <div >
-                                                <!--<p>{{ advert.id_category }}</p>-->
-                                                    <p>{{ advert.location }}</p>
-                                                </div>              
-
-                                                <div class="entry-content adverts-button row">                      
-                                                    <div class="read-more col-lg-4">
-                                                        <a href="/adverts/show/{{ advert.id }}">Voir l'annonce</a>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </section>    
+                                    </section>
 
-                        </li>
-                        {% else %}
-                        <li>Nothing to display</li>
-                        {% endfor %}
-                      </ul>                
+                                </li>
+                            {% else %}
+                                <li>Nothing to display</li>
+                            {% endfor %}
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+  </div>
+</section> 
 
 
-
-                
 {% endblock %}
 
 

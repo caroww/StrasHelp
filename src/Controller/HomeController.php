@@ -9,9 +9,10 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
-
     /**
      * Display home page
      *
@@ -22,6 +23,21 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        if (!empty($_POST)) {
+            if (!empty($_POST['searchWhat']) && !empty($_POST['searchWhere'])) {
+                $homeManager = new HomeManager();
+                $homeBar = $homeManager-> searchBar($_POST['searchWhat'], $_POST['searchWhere']);
+
+                $searchWhat = isset($_POST['searchWhat']) ? $_POST['searchWhat'] : " ";
+                $searchWhere = isset($_POST['searchWhere']) ? $_POST['searchWhere'] : " ";
+
+                return $this->twig->render('Home/searchBarResult.html.twig', ['homeBar' => $homeBar,
+                'searchWhat' => $searchWhat, 'searchWhere' => $searchWhere]);
+            } else {
+                return $this->twig->render('Home/index.html.twig');
+            }
+        } else {
+            return $this->twig->render('Home/index.html.twig');
+        }
     }
 }

@@ -1,6 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<!--
+$temporaryCounter = 1;
+            foreach ($allGladiators as $gladiator) 
+            {           
+                             
+                echo '<div class="ip-item">';
+                echo '<div class="ip-pic">';
+                echo '<img width=300px src="uploads/glad' . $temporaryCounter++ . '.jpg" alt="">';
+-->
 
 <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
@@ -19,9 +28,9 @@
                         <a href="/category/showAdvertsCategory/{{ category.id }}"> 
                             <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-info">
-                                <h4>{{ category.name }}</h4>
+                                <h4 class="categoryh4">{{ category.name }}</h4>
                                     {% if category.image %}
-                                    <img src=('{{ category.image }}')>
+                                    <img style="background : white" src="{{ category.image }}" width="150px">
                                     {% endif %}
                             </div>
                             </div>                          

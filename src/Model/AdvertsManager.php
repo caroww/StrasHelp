@@ -87,4 +87,14 @@ class AdvertsManager extends AbstractManager
         $statement->bindValue('availability', $adverts['availability'], PDO::PARAM_STR);
         return $statement->execute();
     }
+
+        /**
+     * Get all row from database.
+     *
+     * @return array
+     */
+    public function selectAllByIdDesc(): array
+    {
+        return $this->pdo->query('SELECT * FROM advert ORDER BY id DESC')->fetchAll();
+    }
 }

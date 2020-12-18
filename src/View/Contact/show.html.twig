@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Contact {{ contact.subject }}</h1>
+    {% for contact in contacts %}
+    <ul>
+    <li>{{ contact.name }}</li>
+    <li>{{ contact.email }}</li>
+    <li>{{ contact.subject }}</li>
+    <a href="/contact/edit/{{ form.id }}">Edit</a>
+    <a href="/contact/delete/{{ contact.id }}">Supprimer</a>
+    <a href="/contact/index">Back</a>
+{% endblock %}
