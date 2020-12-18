@@ -6,7 +6,11 @@ Création d'un site d'échange de services pour une association avec : espace me
 
 ## Démonstration des fonctionnalités en video
 
-- [Accueil et searchbar](https://www.loom.com/share/1c5f28efa28146cc8a0b622a4f8d446e);
+- [Accueil et searchbar](https://www.loom.com/share/1c5f28efa28146cc8a0b622a4f8d446e)
+- [Partie administrateur](https://www.loom.com/share/26041fb2f9804bbe8cab65f788735968)
+- [Inscription](https://www.loom.com/share/5b2aa23ab70a428aba7eda8c40651bc3)
+
+
 
 &nbsp; 
 --- 
